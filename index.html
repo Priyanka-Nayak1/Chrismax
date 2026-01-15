@@ -12,6 +12,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
     </style>
+    
 </head>
 <body>
     <!---------------------------------------------------Header------------------------------------------------>
@@ -55,11 +56,12 @@
             </p>
             <button class="cta">Shop Now</button>
         </div>
+        
 
         <img src="assets/santa.png" class="santa" alt="Santa">
     </header> 
 
-
+    <div class="scroll-trigger"></div>
 
     <!--------------------------------------------------- About Section ----------------------------------------->
      <section class="about-section" id="about">
@@ -378,6 +380,23 @@
 
 
 </div>
+
+<!-- ---------------------------------------------------Script for JavaScript------------------------------------------------------------- -->
+<script>
+    const mainContainer = document.querySelector(".main-container");
+    const navLinks =  document.querySelector(".nav-links")
+    
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 70) {
+        mainContainer.classList.add("scrolled");
+        navLinks.classList.add("scrolled");
+        } else {
+        mainContainer.classList.remove("scrolled");
+        navLinks.classList.remove("scrolled");
+        }
+    });
+</script>
 
 </body>
 </html>
