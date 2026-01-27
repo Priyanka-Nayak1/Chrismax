@@ -1,0 +1,118 @@
+/* --------------------------------------------------------Countdown------------------------------------------------- */
+
+$color_1: #525252;
+$color_2: #000;
+$color_3: #EC1944;
+$font-family_1: "Nunito", sans-serif;
+$background-color_1: #F2F8F7;
+
+/* Responsive */
+.countdown {
+	padding: clamp(40px, 6vw, 80px) 16px;
+	background-color: $background-color_1;
+	color: $color_1;
+}
+.after-about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-family: $font-family_1;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px;
+	h2 {
+		margin-top: 15px;
+		font-size: clamp(26px, 6vw, 56px);
+		font-weight: 700;
+		color: $color_2;
+		line-height: 1.2;
+		max-width: 900px;
+	}
+	p {
+		font-size: clamp(14px, 3.5vw, 24px);
+		color: $color_1;
+		margin-top: 18px;
+		max-width: 600px;
+	}
+}
+.time-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: clamp(20px, 5vw, 75px);
+	margin-top: 30px;
+	width: 100%;
+	>div {
+		flex: 0 1 120px;
+		max-width: 180px;
+		text-align: center;
+		font-size: clamp(28px, 8vw, 60px);
+		font-weight: 700;
+		color: $color_3;
+		line-height: 1.2;
+	}
+	span {
+		display: block;
+		margin-top: 10px;
+		font-size: clamp(12px, 3vw, 18px);
+		font-weight: 500;
+		color: $color_2;
+	}
+}
+@media (max-width: 480px) {
+	.countdown {
+		text-align: center;
+		padding: 48px 0px;
+		text-align: center;
+	}
+	.after-about {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		h2 {
+			font-size: 24px;
+		}
+		p {
+			font-size: clamp(14px, 3.5vw, 24px);
+			margin: 16px 0px 0px;
+		}
+	}
+	.time-container {
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: left;
+		>div {
+			width: 45%;
+			font-size: clamp(28px, 8vw, 60px);
+			margin-top: 20px;
+		}
+		span {
+			font-size: clamp(12px, 3vw, 18px);
+		}
+	}
+}
+@media (min-width: 481px) and (max-width: 768px) {
+	.after-about {
+		margin: 0 40px;
+		padding: 20px 30px;
+		h2 {
+			font-size: 40px;
+		}
+		p {
+			font-size: clamp(14px, 3.5vw, 24px);
+		}
+	}
+	.time-container {
+		gap: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+		>div {
+			width: 22%;
+			font-size: clamp(28px, 8vw, 60px);
+		}
+		span {
+			font-size: clamp(12px, 3vw, 18px);
+		}
+	}
+}
